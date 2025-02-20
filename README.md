@@ -5,6 +5,9 @@
 
 A productivity-enhancing timer implementing the Pomodoro Technique with visual/audio alerts.
 
+## Screenshot
+![Pomodoro Timer UI](src/assets/Screenshot.png)
+
 ## Features
 - 🎯 **Focus mode** (25 mins)
 - ☕ **Short break** (5 mins)
