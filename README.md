@@ -6,34 +6,44 @@
 A productivity-enhancing timer implementing the Pomodoro Technique with visual/audio alerts.
 
 ## Features
-🎯 Focus mode (25 mins)  
-☕ Short break (5 mins)  
-🌴 Long break (20 mins)  
-🔔 Audio/visual notifications  
-📊 Session counter (4 focus ➔ long break)
+- 🎯 **Focus mode** (25 mins)
+- ☕ **Short break** (5 mins)
+- 🌴 **Long break** (20 mins)
+- 🔔 **Audio/visual notifications**
+- 📊 **Session counter** (4 focus ➔ long break)
 
 ## Installation
-
+```sh
 git clone https://github.com/YOURUSERNAME/pomodoro-timer.git
 cd pomodoro-timer
 npm install
 npm start
+```
 
 ## Usage
-1. Press ▶️ to start timer
-2. Switch modes with ↻ button
-3. 🔕 Click alert to dismiss
+1. Press ▶️ to start the timer.
+2. Switch modes with the ↻ button.
+3. 🔕 Click alert to dismiss notifications.
 
 ## Customization
 Modify `PomodoroTimer.jsx` to adjust timings:
+
+```js
 const getTotalTime = () => {
-case "focus": return defaultTime * 60; // Edit 25
-case "short": return 5 * 60; // Short break
-case "long": return 20 * 60; // Long break
+  switch (mode) {
+    case "focus": return 25 * 60; // Edit for focus session duration
+    case "short": return 5 * 60; // Short break duration
+    case "long": return 20 * 60; // Long break duration
+    default: return 25 * 60;
+  }
 };
+```
 
 ## Future Roadmap
 - [ ] Custom time presets
 - [ ] Theme selector
 - [ ] Progress visualization
-- [ ] Pause functionality
+
+---
+Contributions and suggestions are welcome! 🚀
+
